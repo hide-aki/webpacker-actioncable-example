@@ -84,6 +84,7 @@ GEM
     multi_json (1.12.1)
     mysql2 (0.4.8)
     mysql2 (0.4.8-x64-mingw32)
+    net-ping (2.0.1)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -180,6 +181,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   mysql2
+  net-ping
   puma (~> 3.7)
   rails (~> 5.1.2)
   sass-rails (~> 5.0)

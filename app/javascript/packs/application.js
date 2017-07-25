@@ -9,9 +9,9 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Hello = require('./hello_react.jsx').default;
+const Ping = require('./ping').default;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const hello = document.body.appendChild(document.createElement('div'));
-  ReactDOM.render(React.createElement(Hello, {name: 'Taro'}), hello);
+  const container = document.body.appendChild(document.createElement('div'));
+  ReactDOM.render(React.createElement(Ping), container);
 });

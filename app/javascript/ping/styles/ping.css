@@ -1,0 +1,8 @@
+:local(.results) {
+  background-color: black;
+  color: white;
+}
+
+:local(.results p) {
+  margin: 0;
+}

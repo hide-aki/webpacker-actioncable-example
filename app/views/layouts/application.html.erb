@@ -3,7 +3,7 @@
 <head>
   <title>WebpackerActioncable</title>
   <%= csrf_meta_tags %>
-
+  <%= action_cable_meta_tag %>
   <%#= ExtractTextPlugin により app/javascript/packs/application 以下で依存したcssモジュールをまとめてくれてるからそれを使う %>
   <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
