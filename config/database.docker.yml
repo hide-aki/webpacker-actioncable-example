@@ -8,8 +8,8 @@ default: &default
 
 development:
   <<: *default
-  database: nanairo_development
+  database: webpackeractioncable_development
 
 test:
   <<: *default
-  database: nanairo_test
+  database: webpackeractioncable_test
