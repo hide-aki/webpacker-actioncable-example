@@ -1,0 +1,36 @@
+version: '2'
+options:
+  verbose: true
+  compose-file-path: 'docker-compose.yml'
+  compose-dev-file-path: 'docker-compose.sync.yml'
+syncs:
+  webpacker_actioncable_db-sync:
+    sync_args: ['-perms=0']
+    sync_strategy: 'unison'
+    sync_host_ip: '127.0.0.1'
+    src: './docker-entrypoint-initdb.d'
+  webpacker_actioncable_app-sync:
+    sync_args: ['-perms=0']
+    sync_strategy: 'unison'
+    sync_host_ip: '127.0.0.1'
+    sync_excludes:
+      # 同期対象外は同期が必要ないものや、パス上にあるものの別のボリュームにマウントしているもの、
+      # 同期するとファイル数が多くなりすぎてパフォーマンスに影響を与えるものを含める
+      - '.idea'
+      - '.git'
+      - '.bundle'
+      - 'docker'
+      - 'vendor/bundle'
+      - 'node_modules'
+      - 'tmp'
+      - 'public/assets'
+    sync_excludes_type: 'Regex'
+    src: './'
+    watch_excludes:
+      - '.idea'
+      - '.*/.git'
+      - '.bundle'
+      - 'vendor/bundle'
+      - '.*/node_modules'
+      - 'tmp'
+      - 'public/assets'

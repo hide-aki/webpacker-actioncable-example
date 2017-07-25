@@ -1,0 +1,13 @@
+version: '3'
+volumes:
+  webpacker_actioncable_db-sync:
+    external: true
+  webpacker_actioncable_app-sync:
+    external: true
+services:
+  db:
+    volumes:
+      - webpacker_actioncable_db-sync:/docker-entrypoint-initdb.d:rw
+  app:
+    volumes:
+      - webpacker_actioncable_app-sync:/app:rw
