@@ -24,3 +24,5 @@
 
 .idea
 webpacker-actioncable.iml
+/public/packs
+/node_modules
