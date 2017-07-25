@@ -4,10 +4,11 @@
 
 const React = require('react');
 const PropTypes = require('prop-types');
-
+const styles = require('../hello_react/styles/hello-react');
+console.log(styles);
 export default class Hello extends React.Component {
   render() {
-    return <div>Hello {this.props.name}!</div>;
+    return <div className={styles.hello}>Hello {this.props.name}!</div>;
   }
 }
 
