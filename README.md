@@ -1,24 +1,8 @@
-# README
+Webpacker + ActionCable
+==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+docker-compose -f docker-compose.yml -f docker-compose.sync.yml build
 
-Things you may want to cover:
+docker-sync-stack start
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+docker-compose -f docker-compose.yml -f docker-composeync.yml run -p 8080:8080 app bundle exec ruby ./bin/webpack-dev-server
