@@ -23,6 +23,7 @@
 .byebug_history
 
 .idea
-webpacker-actioncable.iml
+*.iml
+.envrc
 /public/packs
 /node_modules
